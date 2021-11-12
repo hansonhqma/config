@@ -127,6 +127,13 @@ unset __conda_setup
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 15.0.2)
 
+PROMPT="%F{white}%n%f"
+PROMPT+="@"
+PROMPT+="%F{green}${${(%):-%m}}%f" # Blue host name, minus zoltan
+PROMPT+=" "
+PROMPT+="%F{yellow}%1~ %f" # Yellow working directory
+PROMPT+=" $ "
+
 # alias for switching jdk versions 1.8/15
 alias 'jdk8'='JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)'
 alias 'jdk15'='JAVA_HOME=$(/usr/libexec/java_home -v 15.0.2)'

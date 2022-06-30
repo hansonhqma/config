@@ -13,6 +13,7 @@ set backspace=indent,eol,start
 set expandtab
 set tabstop=4
 set shiftwidth=4
+set scrolloff=999
 
 command! W write
 command! Q quit
@@ -37,4 +38,7 @@ call vundle#end()
 
 filetype plugin indent on
 
-colo jellybeans
+colo default
+
+highlight Comment ctermfg=2
+highlight Statement ctermfg=185

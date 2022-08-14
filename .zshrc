@@ -125,14 +125,15 @@ unset __conda_setup
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
+
 export JAVA_HOME=$(/usr/libexec/java_home -v 15.0.2)
 
-PROMPT="%F{white}%n%f"
+PROMPT="%F{white}batman%f"
 PROMPT+="@"
-PROMPT+="%F{green}${${(%):-%m}}%f" # Blue host name, minus zoltan
-PROMPT+=" "
-PROMPT+="%F{yellow}%1~ %f" # Yellow working directory
-PROMPT+=" $ "
+#PROMPT+="%F{green}${${(%):-%m}}%f "
+PROMPT+="%F{green}%1~%f"
+PROMPT+="$ "
 
 # alias for switching jdk versions 1.8/15
 alias 'jdk8'='JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)'
@@ -150,11 +151,14 @@ alias drive='cd ~/Google\ Drive/'
 alias dev='cd ~/dev'
 alias rpi='cd Google\ Drive/2019\ -\ 2023\ Undergraduate/'
 alias pip='python3 -m pip'
-alias csl='cd ~/dev/CSCI-2500-Local'
 alias cs='cd ~/Google\ Drive/2019\ -\ 2023\ Undergraduate/RPI\ ARCH/CSCI\ 2600/'
 alias o='open .'
 alias gs='git status'
-alias brat='py2 ~/dev/brat-v1.3_Crunchy_Frog/standalone.py'
 alias jp='jupyter-lab'
 alias session='tmux new -s'
 alias drm='/Users/hansonma/dev/DrMemory-MacOS-2.2.1-alpha2/drmemory'
+alias token='cat ~/dev/token.txt'
+alias algo='cd /Users/hansonma/CSCI\ 2300\ local'
+alias np='cd /Users/hansonma/MANE\ 2110'
+alias ds='cd /Users/hansonma/Google Drive/2019 - 2023 Undergraduate/Spring 2022/CSCI 1200'
+alias sublime='open /Applications/Sublime\ Text.app'

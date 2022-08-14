@@ -40,5 +40,7 @@ filetype plugin indent on
 
 colo default
 
-highlight Comment ctermfg=2
+highlight Comment ctermfg=10
 highlight Statement ctermfg=185
+highlight Constant ctermfg=9
+highlight Function ctermfg=14

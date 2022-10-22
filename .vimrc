@@ -18,27 +18,19 @@ set scrolloff=999
 command! W write
 command! Q quit
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'valloric/youcompleteme'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'doums/darcula'
-Plugin 'instant-markdown/vim-instant-markdown', {'rtp': 'after'}
-Plugin 'sonph/onehalf'
-Plugin 'mlr-msft/vim-loves-dafny'
-Plugin 'vim-airline/vim-airline'
-Plugin 'nanotech/jellybeans.vim'
-Plugin 'c.vim'
-Plugin 'dunstontc/vim-vscode-theme'
-Plugin 'dracula/vim', { 'name': 'dracula'  }
-
-call vundle#end()
-
 filetype plugin indent on
 
 colo default
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'valloric/youcompleteme'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'dunstontc/vim-vscode-theme'
+Plugin 'c.vim'
+
+call vundle#end()
 
 highlight Comment ctermfg=10
 highlight Statement ctermfg=185

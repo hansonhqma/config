@@ -1,7 +1,6 @@
 set nocompatible
 
 filetype off
-syntax on
 
 set number
 set hlsearch
@@ -20,19 +19,18 @@ command! Q quit
 
 filetype plugin indent on
 
-colo default
-
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'valloric/youcompleteme'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'dunstontc/vim-vscode-theme'
 Plugin 'c.vim'
+Plugin 'tomasiser/vim-code-dark'
 
 call vundle#end()
 
-highlight Comment ctermfg=10
-highlight Statement ctermfg=185
-highlight Constant ctermfg=9
-highlight Function ctermfg=14
+syntax on
+colo codedark
+
+highlight Comment ctermfg=71
+

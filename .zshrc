@@ -4,36 +4,30 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-export JAVA_HOME=/usr/lib/jvm/jdk-18
-export PATH=$PATH:$JAVA_HOME:/usr/local/go/bin:/home/hanson/.rbenv/shims
-
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source /opt/ros/melodic/setup.sh
 
-export CDIR=$(pwd)
-cd /home/hanson/SIRA-Boeing/vision_catkin_ws/devel
-source setup.bash
-cd $CDIR
+source /opt/ros/noetic/setup.zsh
 
-# rbenv stuff
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-
-PROMPT="%F{white}ironman%f"
+export character=ironman
+PROMPT="%B%F{green}$character%f%b"
 PROMPT+="@"
-PROMPT+="%F{green}%1~%f"
+PROMPT+="%B%F{cyan}%~%f%b"
 PROMPT+="$ "
 
 alias c=clear
 alias zshrc='vim ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
+alias tmuxrc='vim ~/.tmux.conf'
+alias trc='vim ~/.tmux.conf'
 alias gs='git status'
-alias token='sh ~/token.sh'
 alias chrome='/opt/google/chrome/google-chrome'
 alias pip2='python2 -m pip'
 alias pip='python3 -m pip'
@@ -42,3 +36,9 @@ alias pwc='pwd | xclip -selection clipboard'
 alias mars='java -jar /usr/bin/Mars45.jar'
 alias files='nautilus --browser'
 alias o='nautilus --browser  .'
+alias nvim='/usr/bin/nvim.appimage'
+alias py='python3'
+alias clock='tty-clock -s -C 4 -t'
+alias l='ls -lhGAg --group-directories-first'
+
+[ -f "/home/hanson/.ghcup/env" ] && source "/home/hanson/.ghcup/env" # ghcup-env
